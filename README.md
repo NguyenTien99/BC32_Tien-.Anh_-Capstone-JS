@@ -1,1 +1,1 @@
-# BC32_Tien-.Anh_-Capstone-JS
+# BC32_TienVaAnh-Nhom8-Capstone-JS
