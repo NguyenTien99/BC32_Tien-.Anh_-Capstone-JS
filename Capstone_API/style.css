@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    /* position: relative; */
+}
+header ul{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    font-size: 30px;
+    align-self: center;
+
+}
+
+header ul li a  {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header ul li{
+    text-decoration: none;
+    list-style: none;
+}
+header ul li  a i{
+    text-decoration: none;
+    position: relative;
+    right: 10px;
+}
+header ul li span{
+    right: 44px;
+    top: 42px;
+    color:black;
+    position: absolute;
+    font-size: 15px;
+    color: #EEF327;
+    width: 25px;
+    background-color:darkgreen;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding:  2px;
+}
+header ul li a:hover{
+    color: darkgreen;
+    transition-duration: 1s;
+    text-decoration: none;
+    font-size: 40px;
+}
+#Product{
+   margin-top: 150px;
+   align-items: center;
+}
+#Product .content{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    gap: 20px;
+    
+}
+#Product .content .content__box{
+    padding-top:20px;
+    position: relative;
+   
+   
+}
+#Product .content .content__text{
+    padding-top: 10px;
+    background-color: black;
+    color: white;
+    width: 76%;
+    text-align: center;
+    align-self: center;
+    margin-left: 12%;
+    height: 80px;
+     border-bottom-left-radius: 50px;
+     border-bottom-right-radius: 50px;
+}
+#Product .overlay{
+    position: absolute;
+    top: 4%;
+    left: 12%;
+    width: 76%;
+    height: 80%;
+    background-color: rgba(0,0,0,.4);
+    opacity: 0;
+    transition: all 1s;
+    z-index: 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 4px solid black;
+    align-items: center;
+    align-self: center;
+    color: white;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+} 
+
+#Product .overlay:hover{
+    opacity: 1;
+}
+#Product button{
+    margin-top:10px;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+#Product button:hover{
+    background-color: green;
+    color: white;
+    transition-duration: 0.5s;
+    height: 50px;
+    width: 120px;
+    font-size: 24px;
+}
+#Product img{
+width: 75%;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+padding: 20px 7px;
+border: 2px solid black;
+
+} 
