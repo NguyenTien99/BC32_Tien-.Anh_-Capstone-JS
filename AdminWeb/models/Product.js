@@ -1,4 +1,4 @@
-// Hàm constructor
+
 function Product(id,name,price,image,desc){
     this.id = id;
     this.name = name;
