@@ -14,7 +14,7 @@ function display(products) {
                     <td>${product.name}</td>
                     <td>${product.price}</td>
                     <td>
-                     <img src="" width="50px" height = "50px">
+                     <img src="${product.img}" width="50px" height = "50px">
                     </td>
                     <td>${product.desc}</td>
                     <td>
@@ -28,7 +28,7 @@ function display(products) {
             `
     );
   }, "");
-  console.log(products)
+  console.log("display",products)
   // console.log(output);
   dom("#tblDanhSachNguoiDung").innerHTML = output;
 }

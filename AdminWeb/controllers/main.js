@@ -9,11 +9,12 @@ function getProducts(){
                 product.id, 
                 product.name, 
                 product.price, 
-                product.image, 
+                product.img, 
                 product.desc);
         })
         
         display(products);
+        console.log("get",products)
     })
     .catch((error) => {
         console.log(error);
@@ -123,7 +124,8 @@ dom(".modal-footer").addEventListener("click", (evt) => {
     dom("#tblDanhSachNguoiDung").addEventListener("click", (evt) => {
         let elementType = evt.target.getAttribute("data-type");
         let id = evt.target.getAttribute("data-id");
-      
+        console.log(evt.target)
+        console.log("1",id)
         if (elementType === "delete") {
           deleteProducts(id);
         } else if (elementType === "edit") {
@@ -135,8 +137,10 @@ dom(".modal-footer").addEventListener("click", (evt) => {
           `;
           // call api get /:id để lấy chi tiết thông tin 1 dữ liệu
           apiGetProductsById(id)
+          console.log(id)
             .then((response) => {
               let product= response.data;
+              console.log(product)
               //fill thông tin lên input
               dom("#maId").value = product.id;
               dom("#tenSP").value =product.tenSP;
