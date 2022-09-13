@@ -70,7 +70,7 @@ function resetForm() {
     dom("#camTruocSP").value="";
     dom("#camSauSP").value="";
     dom("#hinhSP").value = "";
-    dom("loaiSP").value="";
+    dom("#loaiSP").value = "";
     dom("#moTaSP").value = "";
 
   }
@@ -83,13 +83,13 @@ function resetForm() {
     dom("#camSauSP").innerHTML="";
     dom("#hinhSP").innerHTML = "";
     dom("#loaiSP").innerHTML ="";
-    dom("#motaSP").innerHTML = "";
+    dom("#moTaSP").innerHTML = "";
 
   
     dom("#spanName").classList.remove("d-block");
     dom("#spanPrice").classList.remove("d-block");
     dom("#spanScreen").classList.remove("d-block");
-    dom("#spanFrontCam").classLit.remove("d-block");
+    dom("#spanFrontCam").classList.remove("d-block");
     dom("#spanBackCam").classList.remove("d-block");
     dom("#spanImage").classList.remove("d-block");
     dom("#spanType").classList.remove("d-block");
@@ -112,14 +112,22 @@ dom(".modal-footer").addEventListener("click", (evt) => {
     let id = dom("#maId").value;
     let tenSP = dom("#tenSP").value;
     let giaSP = dom("#giaSP").value;
+    let manHinhSP = dom("#manHinhSP").value;
+    let camTruocSP = dom("#camTruocSP").value;
+    let camSauSP = dom("#camSauSP").value;
     let hinhSP = dom("#hinhSP").value;
+    let loaiSP = dom("#loaiSP").value;
     let moTaSP = dom("#moTaSP").value;
 
     let product = new Product(
         null,
        tenSP,
        giaSP,
+       manHinhSP,
+       camTruocSP,
+       camSauSP,
        hinhSP,
+       loaiSP,
        moTaSP,
       );
       if (elementType === "add") {
