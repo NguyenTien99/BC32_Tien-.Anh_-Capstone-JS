@@ -9,11 +9,17 @@ function getProducts(){
                 product.id, 
                 product.name, 
                 product.price, 
-                product.image, 
-                product.desc);
+                product.screen,
+                product.frontCamera,
+                product.backCamera,
+                product.img, 
+                product.type,
+                product.desc
+                );
         })
         
         display(products);
+        console.log("get",products)
     })
     .catch((error) => {
         console.log(error);
@@ -60,7 +66,11 @@ function resetForm() {
     dom("#maId").value = "";
     dom("#tenSP").value = "";
     dom("#giaSP").value = "";
+    dom("#manHinhSP").value = "";
+    dom("#camTruocSP").value="";
+    dom("#camSauSP").value="";
     dom("#hinhSP").value = "";
+    dom("loaiSP").value="";
     dom("#moTaSP").value = "";
 
   }
@@ -68,13 +78,21 @@ function resetForm() {
   function resetspan() {
     dom("#tenSP").innerHTML = "";
     dom("#giaSP").innerHTML = "";
+    dom("#manHinhSP").innerHTML ="";
+    dom("#camTruocSP").innerHTML ="";
+    dom("#camSauSP").innerHTML="";
     dom("#hinhSP").innerHTML = "";
+    dom("#loaiSP").innerHTML ="";
     dom("#motaSP").innerHTML = "";
 
   
     dom("#spanName").classList.remove("d-block");
     dom("#spanPrice").classList.remove("d-block");
+    dom("#spanScreen").classList.remove("d-block");
+    dom("#spanFrontCam").classLit.remove("d-block");
+    dom("#spanBackCam").classList.remove("d-block");
     dom("#spanImage").classList.remove("d-block");
+    dom("#spanType").classList.remove("d-block");
     dom("#spanMota").classList.remove("d-block");
   }
   dom("#btnThemNguoiDung").addEventListener("click", () =>{
@@ -123,7 +141,8 @@ dom(".modal-footer").addEventListener("click", (evt) => {
     dom("#tblDanhSachNguoiDung").addEventListener("click", (evt) => {
         let elementType = evt.target.getAttribute("data-type");
         let id = evt.target.getAttribute("data-id");
-      
+        console.log(evt.target)
+        console.log("1",id)
         if (elementType === "delete") {
           deleteProducts(id);
         } else if (elementType === "edit") {
@@ -135,8 +154,10 @@ dom(".modal-footer").addEventListener("click", (evt) => {
           `;
           // call api get /:id để lấy chi tiết thông tin 1 dữ liệu
           apiGetProductsById(id)
+          console.log(id)
             .then((response) => {
               let product= response.data;
+              console.log(product)
               //fill thông tin lên input
               dom("#maId").value = product.id;
               dom("#tenSP").value =product.tenSP;

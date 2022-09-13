@@ -13,9 +13,13 @@ function display(products) {
                     <td>${index + 1}</td>
                     <td>${product.name}</td>
                     <td>${product.price}</td>
+                    <td>${product.screen}</td>
+                    <td>${product.frontCamera}</td>
+                    <td>${product.backCamera}</td>
                     <td>
-                     <img src="" width="50px" height = "50px">
+                     <img src="${product.img}" width="50px" height = "50px">
                     </td>
+                    <td>${product.type}</td>
                     <td>${product.desc}</td>
                     <td>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-type="edit" data-id="${
@@ -28,7 +32,7 @@ function display(products) {
             `
     );
   }, "");
-  console.log(products)
-  // console.log(output);
+  console.log("display",products)
+  console.log(output);
   dom("#tblDanhSachNguoiDung").innerHTML = output;
 }

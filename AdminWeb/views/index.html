@@ -138,7 +138,11 @@
                   <th>STT</th>
                   <th>Tên sản phẩm</th>
                   <th>Giá</th>
+                  <th>Màn Hình</th>
+                  <th>Camera Trước</th>
+                  <th>Camera Sau</th>
                   <th>Hình ảnh</th>
+                  <th>Lựa chọn</th>
                   <th>Mô tả</th>
                   <th>Action</th>
                 </thead>
@@ -198,6 +202,36 @@
                   <span class="showinfo" id="spanPrice"></span>
                 </div>
                 <div class="form-group">
+                  <label>Màn hình</label>
+                  <input
+                    id="manHinhSP"
+                    class="form-control"
+                    placeholder="Nhập vào màn hình sản phẩm"
+                  />
+  
+                  <span class="showinfo" id="spanScreen"></span>
+                </div>
+                <div class="form-group">
+                  <label>Camera Trước</label>
+                  <input
+                    id="camTruocSP"
+                    class="form-control"
+                    placeholder="Nhập vào camera trước của sản phẩm"
+                  />
+  
+                  <span class="showinfo" id="spanFrontCam"></span>
+                </div>
+                <div class="form-group">
+                  <label>Camera Sau</label>
+                  <input
+                    id="camSauSP"
+                    class="form-control"
+                    placeholder="Nhập vào camera sau của sản phẩm"
+                  />
+  
+                  <span class="showinfo" id="spanBackCam"></span>
+                </div>
+                <div class="form-group">
                   <label>Hình Ảnh</label>
                   <input
                     id="hinhSP"
@@ -206,7 +240,17 @@
                   />
   
                   <span class="showinfo" id="spanImage"></span>
-                </div>             
+                </div>    
+                     <div>
+                <label>Loại</label>
+                  <select class="form-control" id="loaiSP">
+                    <option value="">Chọn loại sản phẩm</option>
+                    <option value="Iphone">Iphone</option>
+                    <option value="SamSung">SamSung</option>
+
+                  </select>
+                  <span class="showinfo" id="spanType"></span>
+                </div>       
                 <div class="form-group">
                   <label>Mô tả</label>
                   <textarea name="" id="moTaSP" class="form-control" placeholder="Nhập vào mô tả"></textarea>
