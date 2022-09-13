@@ -31,8 +31,8 @@ function display(products) {
                 </tr>
             `
     );
-  }, "");
-  console.log("display",products)
-  console.log(output);
+  }, "");  // console.log("display",products)
+  // console.log(output);
+
   dom("#tblDanhSachNguoiDung").innerHTML = output;
 }
