@@ -125,7 +125,7 @@ dom(".modal-footer").addEventListener("click", (evt) => {
         let elementType = evt.target.getAttribute("data-type");
         let id = evt.target.getAttribute("data-id");
         console.log(evt.target)
-        console.log("1",id)
+        console.log("id1",id)
         if (elementType === "delete") {
           deleteProducts(id);
         } else if (elementType === "edit") {
@@ -137,7 +137,7 @@ dom(".modal-footer").addEventListener("click", (evt) => {
           `;
           // call api get /:id để lấy chi tiết thông tin 1 dữ liệu
           apiGetProductsById(id)
-          console.log(id)
+          console.log("idAPI",id)
             .then((response) => {
               let product= response.data;
               console.log(product)

@@ -18,13 +18,21 @@ header .navbar-light .navbar-brand{
     color: white;
     border-radius: 50%;
     text-align: center;
-    line-height: 45px; 
+    line-height: 45px;
+    cursor: pointer;
 }
 #count__cart{
+    position: absolute;
+    top: -5px;
+    right: -5px;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    line-height: 20px;
+    color: white;
+    text-align: center;
 }
 
 /* Product */
@@ -54,6 +62,7 @@ header .navbar-light .navbar-brand{
 .item{
     position: relative;
     padding: 20px;
+    margin-bottom: 20px;
 }
 .item .product_body p{
     margin-top: 10px;
@@ -91,4 +100,26 @@ header .navbar-light .navbar-brand{
     opacity: 1;
 }
 
+/* Modal */
+#modal__cart .modal-content{
+    width: 900px;
+}
+#modal__cart .modal-body{
+    padding: 10px 0;
+}
+#modal__cart table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+#modal__cart td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+#modal__cart table td img {
+    width: 100px;
+}
+#modal__cart .modal-footer{
+    justify-content: space-between;
+}
 
