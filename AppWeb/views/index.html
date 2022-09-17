@@ -50,43 +50,15 @@
     </header>
     <section id="showCase">
         <div class="container py-5">
-            <div class="selection">
-                <select>
+            <div class="selection"  >
+                <select id="selectProducts" onchange="searchProduct()">
                     <option value="">Tất cả</option>
                     <option value="Iphone">Iphone</option>
-                    <option value="SamSung">SamSung</option>
+                    <option value="Samsung">SamSung</option>
                 </select>
             </div>
             <div class="showCase_content pt-4">
-                <div class="row" id="showproduct">
-                    <!-- <div class="col-3">
-                        <div class="item">
-                            <img src="./iphone-11-pro-max-256gb-didongviet_23.jpg" >
-                            <div class="product_body">
-                                <h4>${product.name}</h4>
-                                <p>${product.price}</p>
-                            </div>
-                            <div class="item__detail">
-                                <p>Tên: Iphone 13 Pro Max</p>  
-                                <p>Screen 68</p>
-                                <p>Backcamera: 2 camera</p>
-                                <p>Frontcamera: 7MP</p>
-                                <p>Mô tả: thiết kế mang tính đột phá
-                                </p>
-                                <p>Đánh giá:
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>
-                                <div class="item__button">
-                                    <button class="btn btn-danger mt-2">Mua</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="row" id="showproduct"></div>
             </div>
         </div>
     </section>
@@ -114,34 +86,14 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody id="showDsCart">
-
-                </tbody>
-                <!-- <tr>
-                    <td><img src="./iphone-11-pro-max-256gb-didongviet_23.jpg" alt=""></td>
-                    <td>Iphone 13 Pro Max Gold</td>
-                    <td>1</td>
-                    <td>23000000</td>
-                    <td>
-                        <button class="btn btn-danger">Xóa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><img src="./iphone-11-pro-max-256gb-didongviet_23.jpg" alt=""></td>
-                    <td>Iphone 13 Pro Max Gold</td>
-                    <td>1</td>
-                    <td>23000000</td>
-                    <td>
-                        <button class="btn btn-danger">Xóa</button>
-                    </td>
-                </tr> -->
+                <tbody id="showDsCart"></tbody>
               </table>
             </div>
             <div class="modal-footer">
                 <div id="totalCart"></div>
                 <div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary">Thanh toán</button>
+                    <button type="button" class="btn btn-primary" onclick="resetCart()">Thanh toán</button>
                 </div>
             </div>
           </div>

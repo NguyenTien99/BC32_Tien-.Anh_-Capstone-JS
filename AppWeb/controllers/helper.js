@@ -7,7 +7,7 @@ function display(productList){
         return result + `
         <div class="col-4">
             <div class="item">
-                <img src="${product.img}" >
+                <img src="${product.img}">
                     <div class="product_body">
                         <h5>${product.name}</h5>
                         <p>${product.price}</p>
@@ -41,12 +41,18 @@ function displayCart(cart){
     const output = cart.reduce((result,cartItem) =>{
         return result + `
         <tr>
-            <td><img src="${cartItem.product.img}" width="50px"></td>
+            <td><img src="${cartItem.product.img}"></td>
             <td>${cartItem.product.name}</td>
-            <td>${cartItem.quantity}</td>
+            <td>
+                <div class="countQuantity">
+                    <i class="fa fa-angle-left" data-id="${cartItem.product.id}" data-type="countDown"></i>
+                    ${cartItem.quantity}
+                    <i class="fa fa-angle-right" data-id="${cartItem.product.id}" data-type="countUp"></i>
+                </div>
+            </td>
             <td>${cartItem.product.price}</td>
             <td>
-                <button class="btn btn-danger">Xóa</button>
+                <button class="btn btn-danger" data-id="${cartItem.product.id}" data-type="deleteCartItem">Xóa</button>
             </td>
         </tr>
         `
@@ -61,3 +67,5 @@ function displayCart(cart){
     dom("#showDsCart").innerHTML = output;
     dom("#totalCart").innerHTML ="Tổng tiền thanh toán: "+ totalCart + " vnđ";
 }
+
+
