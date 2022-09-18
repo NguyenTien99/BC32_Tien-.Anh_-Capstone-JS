@@ -50,19 +50,19 @@ function searchProduct(){
     let valueProduct = dom("#selectProducts").value;
 
     // Lấy array productList lọc sản phẩm
-    // valueProduct = valueProduct.toLowerCase();
-    // if(!valueProduct){
-    //     display(productList);
-    //     return;
-    // }
-    // const productListNew = productList.filter((product) => {
-    //     let typeProduct = product.type.toLowerCase()
-    //     return typeProduct === valueProduct;
-    // })
-    // display(productListNew)
+    valueProduct = valueProduct.toLowerCase();
+    if(!valueProduct){
+        display(productList);
+        return;
+    }
+    const productListNew = productList.filter((product) => {
+        let typeProduct = product.type.toLowerCase()
+        return typeProduct === valueProduct;
+    })
+    display(productListNew)
 
     // Lấy ở Axios lọc sản phẩm 
-    getProduct(valueProduct);
+    // getProduct(valueProduct);
 
 }
 
@@ -121,13 +121,22 @@ dom("#showDsCart").addEventListener("click", (evt) =>{
 
     // Hàm giảm số lượng
     if(elType === "countDown"){
-        cart = cart.map((item) =>{
+
+        const checkCount = cart.find((item) => item.product.id === idGet)
+        if(checkCount.quantity <= 0){
+            return;
+        }else{
+            cart = cart.map((item) =>{
             if(item.product.id === idGet){
                 return new CartItem (item.product, item.quantity - 1); 
             }
             return item;
-        })
-        displayCart(cart);
+            })
+
+            localStorage.setItem("cart", JSON.stringify(cart))
+
+            displayCart(cart);
+        }
     }
 
     // Hàm tăng số lượng
@@ -138,6 +147,9 @@ dom("#showDsCart").addEventListener("click", (evt) =>{
             }
             return item;
         })
+
+        localStorage.setItem("cart", JSON.stringify(cart))
+
         displayCart(cart);
     }
     console.log("cart",cart);

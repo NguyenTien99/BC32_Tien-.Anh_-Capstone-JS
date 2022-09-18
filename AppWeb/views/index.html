@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg ">
@@ -28,29 +27,34 @@
                 <h1>StoreNhom8</h1>
 
                 <div class="header__store collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li><li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <div class="shopcart" id="cart" data-toggle="modal" data-target="#modal__cart">
                     <i class="fa fa-shopping-cart"></i>
-                    <span id="count__cart">1</span>
+                    <!-- <span id="count__cart">1</span> -->
                 </div>
                 <!-- <a href="" id="cart"><i class="fa fa-shopping-cart"></i></a> -->
             </nav>
         </div>
     </header>
-    <section id="showCase">
+    <section id="showCase" >
         <div class="container py-5">
-            <div class="selection"  >
+            <h1>SHOWCASE</h1>
+            <div class="selection "  >
                 <select id="selectProducts" onchange="searchProduct()">
                     <option value="">Tất cả</option>
                     <option value="Iphone">Iphone</option>
@@ -62,43 +66,105 @@
             </div>
         </div>
     </section>
+    <footer id="footer__store">
+        <div class="container py-4">
+            <div class="footer__top mb-5">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="footer__first">
+                            <h2><a href="#">StoreNhom8</a></h2>
+                            <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
+                                tempufddfel. Lorem ipsum dolor sit amet Semper at elit.
+                            </p>
+                            <div class="footer__social">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-2 mt-5 mt-sm-0">
+                        <div class="footer__item">
+                            <h4>Usefull Links</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog posts</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-lg-2 mt-5 mt-lg-0">
+                        <div class="footer__item">
+                            <h4>More Info</h4>
+                            <ul>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Vision & Values</a></li>
+                                <li><a href="#">Awards</a></li>
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 mt-5 mt-lg-0">
+                        <div class="footer__sub">
+                            <h4>Subscribe to our Newsletter</h4>
+                            <p>Enter your email and receive the latest news, updates and special offers from us.</p>
+                            <form>
+                                <input type="email" placeholder="Your Email Address" />
+                                <button class="btn">Subscibe Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal__cart">
         Launch demo modal
       </button> -->
-    <div class="modal fade" id="modal__cart" tabindex="-1" role="dialog" aria-labelledby="modal_cartTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modal_cartTitle">Giỏ hàng</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" >
-              <table>
-                <thead>
-                    <tr>
-                        <th>Hình ảnh</th>
-                        <th>Tên</th>
-                        <th>Số lượng</th>
-                        <th>Giá tiền</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="showDsCart"></tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-                <div id="totalCart"></div>
-                <div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-primary" onclick="resetCart()">Thanh toán</button>
+    <div class="container" id="modal__Cart">
+        <div class="modal fade" id="modal__cart" tabindex="-1" role="dialog" aria-labelledby="modal_cartTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal_cartTitle">Giỏ hàng</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
+                <div class="modal-body" >
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Tên</th>
+                            <th>Số lượng</th>
+                            <th>Giá tiền</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="showDsCart"></tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                    <div id="totalCart"></div>
+                    <div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary" onclick="resetCart()">Thanh toán</button>
+                    </div>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
+
+
     <!-- BS4 -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

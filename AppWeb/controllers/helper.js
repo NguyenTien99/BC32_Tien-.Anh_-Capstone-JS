@@ -5,7 +5,7 @@ function dom(selector){
 function display(productList){
     const html = productList.reduce((result,product) =>{
         return result + `
-        <div class="col-4">
+        <div class=" col-6 col-lg-4">
             <div class="item">
                 <img src="${product.img}">
                     <div class="product_body">
@@ -26,7 +26,7 @@ function display(productList){
                             <i class="fa fa-star"></i>
                         </p>
                         <div class="item__button">
-                            <button class="btn btn-danger mt-2" data-id="${product.id}" data-type="add">Mua</button>
+                            <button class="btn btn-success mt-2" data-id="${product.id}" data-type="add">Mua</button>
                         </div>
                     </div>
             </div>
@@ -65,7 +65,7 @@ function displayCart(cart){
 
 
     dom("#showDsCart").innerHTML = output;
-    dom("#totalCart").innerHTML ="Tổng tiền thanh toán: "+ totalCart + " vnđ";
+    dom("#totalCart").innerHTML ="Tổng thanh toán: "+ totalCart + " vnđ";
 }
 
 
