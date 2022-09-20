@@ -53,7 +53,7 @@ function displayCart(cart){
             </td>
             <td>${formatter.format(cartItem.product.price)}</td>
             <td>
-                <button class="btn btn-danger" data-id="${cartItem.product.id}" data-type="deleteCartItem">Xóa</button>
+                <i class="delele_cart fa fa-trash-alt" data-id="${cartItem.product.id}" data-type="deleteCartItem"></i>
             </td>
         </tr>
         `
