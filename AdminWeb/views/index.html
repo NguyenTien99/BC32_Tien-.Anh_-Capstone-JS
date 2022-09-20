@@ -186,7 +186,7 @@
                   <input
                     id="tenSP"
                     class="form-control"
-                    oninput ="validateForm()"
+                    oninput ="validateName()"
                     placeholder="Nhập vào tên sản phẩm"
                   />
   
@@ -197,7 +197,7 @@
                   <input
                     id="giaSP"
                     class="form-control"
-                    oninput="validateForm()"
+                    oninput="validatePrice()"
                     placeholder="Nhập vào giá sản phẩm"
                   />
   
@@ -208,7 +208,7 @@
                   <input
                     id="manHinhSP"
                     class="form-control"
-                    oninput="validateForm()"
+                    oninput="validateScreen()"
                     placeholder="Nhập vào màn hình sản phẩm"
                   />
   
@@ -219,7 +219,7 @@
                   <input
                     id="camTruocSP"
                     class="form-control"
-                    oninput="validateForm()"
+                    oninput="validateFrontCamera()"
                     placeholder="Nhập vào camera trước của sản phẩm"
                   />
   
@@ -230,7 +230,7 @@
                   <input
                     id="camSauSP"
                     class="form-control"
-                    oninput="validateForm()"
+                    oninput="validateBackCamera()"
                     placeholder="Nhập vào camera sau của sản phẩm"
                   />
   
@@ -241,7 +241,7 @@
                   <input
                     id="hinhSP"
                     class="form-control"
-                    oninput="validateForm()"
+                    oninput="validateImage()"
                     placeholder="Nhập vào hình ảnh sản phẩm"
                   />
   
@@ -250,11 +250,15 @@
                 <div class="form-group"
               >
                 <label for="">Loại: </label>
-                <select class="form-control" id="loaiSP" oninput="validateForm()" > 
+                <!-- <select class="form-control" id="loaiSP" oninput="validateType()" > 
                   <option value="">Chọn loại sản phẩm</option>
                   <option value="Iphone">Iphone</option>
                   <option value="SamSung">SamSung</option>
-                  
+                </select> -->
+                <select class="form-control" id="typeSP" oninput="validateType()" > 
+                  <option value="">Chọn loại sản phẩm</option>
+                  <option value="Iphone">Iphone</option>
+                  <option value="SamSung">SamSung</option>
                 </select>
                 <span id="spanType" class="text-danger"></span>
               </div>
@@ -262,7 +266,7 @@
                   <label>Mô tả</label>
                   <textarea name="" id="moTaSP" 
                   class="form-control" 
-                  oninput="validateForm()"
+                  oninput="validateDesc()"
                   placeholder="Nhập vào mô tả">
                 </textarea>
                   
