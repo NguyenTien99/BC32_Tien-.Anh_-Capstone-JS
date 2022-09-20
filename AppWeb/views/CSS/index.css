@@ -258,8 +258,11 @@ header h1{
 #modal__Cart{
     width: 100%;
 }
+#modal__Cart #modal__cart .modal-dialog{
+    max-width: 1000px;
+}
 #modal__cart .modal-content{
-    width: 190%;
+    width: 100%;
 }
 #modal__cart .modal-body{
     padding: 10px 0;
@@ -278,6 +281,10 @@ header h1{
 }
 #modal__cart .modal-footer{
     justify-content: space-between;
+}
+#modal__Cart #showDsCart  .delele_cart{
+    font-size: 25px;
+    cursor: pointer;
 }
 #showDsCart .countQuantity i{
     margin: 0 5px;
@@ -356,4 +363,64 @@ header h1{
     .footer__first h2 a{
         font-size: 26px;
     }
+}
+/* Modal */
+@media (max-width:600px) {
+    #modal__Cart .modal-body table th{
+        font-size: 14px;
+    }
+    #modal__Cart #showDsCart{
+        font-size: 12px;
+    }
+    #modal__Cart #showDsCart img{
+        width: 70px;;
+    }
+    #modal__Cart #showDsCart .countQuantity i{
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        margin: 0;
+        font-size: 10px;
+    }
+    #totalCart{
+        font-size: 14px;
+    }
+    #modal__Cart .modal-footer{
+        padding: 8px;
+    }
+    #modal__Cart .modal-footer .btn__footCart button{
+        font-size: 12px;
+        padding: 0;
+        padding: 3px 6px;
+    }
+    #modal__Cart #showDsCart .delele_cart{
+        font-size: 18px;
+    }
+}
+@media (max-width:460px){
+    #modal__Cart .modal-body table th{
+        font-size: 10px;
+    }
+    #modal__Cart #showDsCart{
+        font-size: 10px;
+    }
+    #modal__Cart #showDsCart img{
+        width: 50px;;
+    }
+    #modal__Cart #showDsCart .countQuantity i{
+        width: 8px;
+        height: 8px;
+        line-height: 8px;
+        margin: 0;
+        font-size: 8px;
+    }
+    #modal__Cart .modal-footer{
+        padding: 5px;
+    }
+    #modal__Cart .modal-footer .btn__footCart button{
+        font-size: 10px;
+        padding: 0;
+        padding: 3px 4px;
+    }
+
 }
