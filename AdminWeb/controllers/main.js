@@ -81,7 +81,7 @@ function resetForm() {
     dom("#spanScreen").innerHTML ="";
     dom("#spanFrontCam").innerHTML ="";
     dom("#spanBackCam").innerHTML="";
-    dom("#spanImag").innerHTML = "";
+    dom("#spanImage").innerHTML = "";
     dom("#spanType").innerHTML ="";
     dom("#spanMota").innerHTML = "";
 

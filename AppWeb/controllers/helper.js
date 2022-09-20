@@ -1,6 +1,7 @@
 function dom(selector){
     return document.querySelector(selector);
 }
+const formatter = new Intl.NumberFormat('vi-VN',{ style: 'currency', currency: 'VND' });
 
 function display(productList){
     const html = productList.reduce((result,product) =>{
@@ -10,7 +11,7 @@ function display(productList){
                 <img src="${product.img}">
                     <div class="product_body">
                         <h5>${product.name}</h5>
-                        <p>${product.price}</p>
+                        <p>${formatter.format(product.price)}</p>
                     </div>
                     <div class="item__detail">
                         <p>Tên: ${product.name}</p>  
@@ -50,7 +51,7 @@ function displayCart(cart){
                     <i class="fa fa-angle-right" data-id="${cartItem.product.id}" data-type="countUp"></i>
                 </div>
             </td>
-            <td>${cartItem.product.price}</td>
+            <td>${formatter.format(cartItem.product.price)}</td>
             <td>
                 <button class="btn btn-danger" data-id="${cartItem.product.id}" data-type="deleteCartItem">Xóa</button>
             </td>
@@ -65,7 +66,9 @@ function displayCart(cart){
 
 
     dom("#showDsCart").innerHTML = output;
-    dom("#totalCart").innerHTML ="Tổng thanh toán: "+ totalCart + " vnđ";
+    // dom("#totalCart").innerHTML ="Tổng thanh toán: "+ totalCart + " vnđ";
+    dom("#totalCart").innerHTML ="Tổng thanh toán: " + formatter.format(totalCart);
+
 }
 
 
