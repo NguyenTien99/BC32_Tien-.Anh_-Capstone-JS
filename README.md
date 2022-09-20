@@ -4,3 +4,4 @@
 - Link deploy: 
 + Appweb: https://bc-32-tien-va-anh-nhom8-capstone-js.vercel.app/
 + AdminWeb: https://bc-32-tien-va-anh-nhom8-capstone-js-admin.vercel.app/
+- Link Youtube: https://youtu.be/MH6skclcWkQ
