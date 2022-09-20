@@ -76,14 +76,14 @@ function resetForm() {
   }
   
   function resetspan() {
-    dom("#tenSP").innerHTML = "";
-    dom("#giaSP").innerHTML = "";
-    dom("#manHinhSP").innerHTML ="";
-    dom("#camTruocSP").innerHTML ="";
-    dom("#camSauSP").innerHTML="";
-    dom("#hinhSP").innerHTML = "";
-    dom("#loaiSP").innerHTML ="";
-    dom("#moTaSP").innerHTML = "";
+    dom("#spanName").innerHTML = "";
+    dom("#spanPrice").innerHTML = "";
+    dom("#spanScreen").innerHTML ="";
+    dom("#spanFrontCam").innerHTML ="";
+    dom("#spanBackCam").innerHTML="";
+    dom("#spanImag").innerHTML = "";
+    dom("#spanType").innerHTML ="";
+    dom("#spanMota").innerHTML = "";
 
   
     dom("#spanName").classList.remove("d-block");
@@ -95,6 +95,7 @@ function resetForm() {
     dom("#spanType").classList.remove("d-block");
     dom("#spanMota").classList.remove("d-block");
   }
+
   dom("#btnThemNguoiDung").addEventListener("click", () =>{
     dom(".modal-title").innerHTML = "Thêm sản phẩm"
     dom(".modal-footer").innerHTML = `
@@ -104,7 +105,7 @@ function resetForm() {
     ;
     resetForm();
     resetspan();
-})
+  })
 
 dom(".modal-footer").addEventListener("click", (evt) => {
     let elementType = evt.target.getAttribute("data-type");
@@ -252,7 +253,7 @@ function validateBackCamera(){
   let back = dom("#camSauSP").value;
   let spanEl = dom("#spanBackCam");
 
-  if (!name) {
+  if (!back) {
     spanEl.classList.add("d-block");
     spanEl.innerHTML ="Cam sau không được để trống";
     return false;
@@ -296,7 +297,7 @@ function validateDesc(){
   let desc = dom("#moTaSP").value;
   let spanEl = dom("#spanMota");
 
-  if (!name) {
+  if (!desc) {
     spanEl.classList.add("d-block");
     spanEl.innerHTML ="Mô tả không được để trống";
     return false;
@@ -324,5 +325,4 @@ function validateForm(){
   }
 
   return true;
-
   }
