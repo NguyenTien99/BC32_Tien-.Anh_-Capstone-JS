@@ -159,6 +159,7 @@ dom("#showDsCart").addEventListener("click", (evt) =>{
 function resetCart(){
     cart = [];
     displayCart(cart);
+    localStorage.setItem("cart", JSON.stringify(cart))
 }
 
 
